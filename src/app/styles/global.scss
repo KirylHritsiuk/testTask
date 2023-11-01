@@ -1,0 +1,22 @@
+@import "./fonts.scss";
+:root {
+  --font-family-main: Kreon, "Kreon", serif;
+
+  --font-size-large: 96px;
+  --font-size-large-mobile: 64px;
+  --font-size-normal: 20px;
+  --font-size-label: 18px;
+  --font-size-small: 14px;
+
+  --color-dark: #000000;
+  --color-white: #ffffff;
+
+  --header-height: 121px;
+
+  --max-width-mobile: 576px;
+
+  font-family: var(--font-family-main);
+  line-height: normal;
+  font-style: normal;
+  font-weight: 400;
+}

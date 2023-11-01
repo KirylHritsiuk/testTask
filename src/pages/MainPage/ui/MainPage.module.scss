@@ -1,0 +1,38 @@
+.mainPage {
+  display: grid;
+  grid-template-rows: minmax(20px, 100px) 1fr;
+  align-content: space-between;
+  height: 100%;
+}
+
+.selectWrapper {
+  margin-left: 29px;
+  width: 181px;
+  height: 43px;
+
+  @media screen and (max-width: 575px) {
+    margin: 0 auto;
+  }
+}
+.select {
+  margin-left: 29px;
+  width: 181px;
+  height: 43px;
+
+  @media screen and (max-width: 575px) {
+    margin: 0 auto;
+  }
+}
+.info {
+  display: grid;
+  text-align: center;
+  place-items: center;
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-size: var(--font-size-large);
+  padding: 10px;
+
+  @media screen and (max-width: 575px) {
+    font-size: var(--font-size-large-mobile);
+  }
+}
