@@ -1,6 +1,6 @@
 .mainPage {
   display: grid;
-  grid-template-rows: minmax(20px, 100px) 1fr;
+  grid-template-rows: minmax(80px, 1fr) minmax(200px, 3fr);
   align-content: space-between;
   height: 100%;
 }

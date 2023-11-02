@@ -1,8 +1,9 @@
 import MainLayout from "@/widgets/layouts/MainLayout/MainLayout";
-import { MainPage } from "../../../../pages/MainPage";
-import { NotFoundPage } from "../../../../pages/NotFoundPage";
+import { MainPage } from "@/pages/MainPage";
+import { NotFoundPage } from "@/pages/NotFoundPage";
 import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
+import { RootLoader } from "@/shared/ui";
 
 const AppRouter = () => {
   return (
@@ -10,7 +11,7 @@ const AppRouter = () => {
       <Route
         path="/"
         element={
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<RootLoader />}>
             <MainLayout />
           </Suspense>
         }

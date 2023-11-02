@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { rtkApi } from '../../../../shared/api/rtkApi';
+import { rtkApi } from '@/shared/api/rtkApi';
 import { StateSchema } from '..';
 import { currencyActions, currencyReducer } from '@/features/Currency';
 
