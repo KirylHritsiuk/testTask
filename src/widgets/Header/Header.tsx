@@ -3,6 +3,7 @@ import styles from "./Header.module.scss";
 import { HTMLAttributes } from "react";
 
 interface HeaderProps extends HTMLAttributes<HTMLHeadElement> {}
+
 const Header = ({ className }: HeaderProps) => {
   return (
     <header className={cn(styles.header, className)}>

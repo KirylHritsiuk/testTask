@@ -5,6 +5,7 @@ import { HTMLAttributes } from "react";
 import cn from "classnames";
 
 interface MainLayoutProps extends HTMLAttributes<HTMLDivElement> {}
+
 const MainLayout = ({ className }: MainLayoutProps) => {
   return (
     <div className={cn(styles.MainLayout, className)}>

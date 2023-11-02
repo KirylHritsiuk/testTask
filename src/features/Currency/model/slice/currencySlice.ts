@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CurrencyStateSchema } from "../../../../entities/Currency/model/types";
+import { CurrencyStateSchema } from "@/entities/Currency/model/types";
 import { endpoints } from "@/features/Currency/api/currencyAPI";
 
 const initialState: CurrencyStateSchema = {

@@ -7,3 +7,4 @@ export interface CurrencySchema {
 export interface CurrencyStateSchema {
     name: string
 }
+

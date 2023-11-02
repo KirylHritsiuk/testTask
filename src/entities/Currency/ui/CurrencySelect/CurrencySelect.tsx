@@ -1,30 +1,24 @@
-import { memo, useCallback, useMemo, useState } from "react";
+import { memo, useCallback, useMemo } from "react";
 import { CurrencySchema } from "../../model/types";
+import { Option } from "./CurrencySelector.types";
 import Select, { SingleValue } from "react-select";
-
+import { customStyles, customTheme } from "./CurrencySelect.theme";
 interface CurrencySelectProps {
   className?: string;
   currencies: CurrencySchema[];
   onChange?: (value: string) => void;
 }
-interface Option {
-  label: string;
-  value: string;
-}
 
 export const CurrencySelect = memo(
   ({ className, onChange, currencies }: CurrencySelectProps) => {
-    const [selectedValue, setSelectedValue] = useState<Option | null>(null);
-
     const handleCurrencyChange = useCallback(
       (value: SingleValue<Option>) => {
         onChange?.(value?.value ?? "");
-        setSelectedValue(value);
       },
       [onChange]
     );
 
-    const options: Option[] = useMemo(
+    const options: readonly Option[] = useMemo(
       () =>
         currencies.map((currency) => ({
           label: currency.id,
@@ -37,9 +31,11 @@ export const CurrencySelect = memo(
       <Select
         className={className}
         options={options}
-        value={selectedValue || options[0]}
-        onChange={(item) => handleCurrencyChange(item)}
+        defaultValue={options[0]}
+        onChange={(item) => handleCurrencyChange(item as SingleValue<Option>)}
         maxMenuHeight={175}
+        theme={customTheme}
+        styles={customStyles}
       />
     );
   }
